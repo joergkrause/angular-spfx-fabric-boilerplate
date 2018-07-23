@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.5.1",
+    "libraryName": "angular-webpart",
+    "libraryId": "6b53e126-d09f-4e2e-9784-95ff38c8b3ff",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "angular-webpart",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "build": "gulp bundle",
+    "clean": "gulp clean",
+    "pack": "rimraf ./lib/webpart && gulp clean && gulp build && gulp package-solution --ship",
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "@microsoft/sp-core-library": "1.5.1",
+    "@microsoft/sp-webpart-base": "1.5.1",
+    "@microsoft/sp-lodash-subset": "1.5.1",
+    "@microsoft/sp-office-ui-fabric-core": "1.5.1",
+    "@types/webpack-env": "1.13.1",
+    "@types/es6-promise": "0.0.33",
+    "@angular/animations": "^6.0.3",
+    "@angular/common": "^6.0.3",
+    "@angular/compiler": "^6.0.3",
+    "@angular/core": "^6.0.3",
+    "@angular/forms": "^6.0.3",
+    "@angular/http": "^6.0.3",
+    "@angular/platform-browser": "^6.0.3",
+    "@angular/platform-browser-dynamic": "^6.0.3",
+    "@angular/router": "^6.0.3",
+    "core-js": "^2.5.4",
+    "rxjs": "^6.0.0",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^6.0.3",
+    "@angular-devkit/build-angular": "~0.6.8",
+    "@microsoft/sp-build-web": "1.5.1",
+    "@microsoft/sp-module-interfaces": "1.5.1",
+    "@microsoft/sp-webpart-workbench": "1.5.1",
+    "gulp": "~3.9.1",
+    "@types/chai": "3.4.34",
+    "@types/mocha": "2.2.38",
+    "ajv": "~5.2.2"
+  }
+}
