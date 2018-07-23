@@ -3,9 +3,12 @@ import { IWebPartContext } from '@microsoft/sp-webpart-base';
 
 @Component({
   selector: 'spfx-app',
-  template: `<h1 class="ms-font-su">{{ title }}</h1><div class="ms-fontSize-xl">{{ name }}</div>`
+  template: `
+  <h1 class="ms-font-su">{{ title }}</h1>
+  <div class="ms-fontSize-xl">{{ name }}</div>
+  <spfx-list listName="Demo"></spfx-list>
+  `
 })
-
 export class AppComponent implements OnInit {
 
   public name: string = '';

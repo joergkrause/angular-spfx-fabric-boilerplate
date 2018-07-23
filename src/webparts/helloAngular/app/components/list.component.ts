@@ -8,7 +8,8 @@ import { ISPList, ISPLists } from '../models/demo.model';
 @Component({
   selector: 'spfx-list',
   template: `
-    <table class="TFtable" border=1 width=100% style="border-collapse: collapse;">
+    <div class="" *ngIf="!tems">No items found or list '{{ listName }}' does not exists</div>
+    <table class="TFtable" border=1 width=100% style="border-collapse: collapse;" *ngIf="items">
       <th>Title</th><th>Name</th>
       <tr *ngFor="let item of items">
         <td>{{ item.Title }}</td>
@@ -19,13 +20,15 @@ import { ISPList, ISPLists } from '../models/demo.model';
 })
 export class ListComponent implements OnInit {
 
-  private items: ISPLists;
+  public items: ISPLists;
+  @Input()
+  public listName: string;
 
   constructor(private listService: GetSPListService) {
   }
 
   public ngOnInit() {
-    this.listService.GetDataAsync('Demo').then(data => this.items = data);
+    this.listService.GetDataAsync(this.listName).then(data => this.items = data);
   }
 
 }
