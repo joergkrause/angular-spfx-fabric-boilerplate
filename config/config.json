@@ -5,14 +5,14 @@
     "hello-world-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/helloWorld/HelloWorldWebPart.js",
-          "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/helloAngular/HelloAngularWebPart.js",
+          "manifest": "./src/webparts/helloAngular/HelloAngularWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
+    "HelloAngularWebPartStrings": "lib/webparts/helloAngular/loc/{locale}.js"
   }
 }

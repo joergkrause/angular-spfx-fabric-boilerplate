@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "b6f7c0cc-79b4-4472-85de-4a2ca8ee8fdc",
-  "alias": "HelloWorldWebPart",
+  "id": "ac94969a-6cf2-4409-a802-1690bd2efe10",
+  "alias": "HelloAngularWebPart",
   "componentType": "WebPart",
 
   // The "*" signifies that the version should be taken from the package.json
@@ -16,11 +16,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
     "group": { "default": "Other" },
-    "title": { "default": "HelloWorld" },
-    "description": { "default": "HelloWorld description" },
+    "title": { "default": "HelloAngular" },
+    "description": { "default": "HelloAngular description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "HelloWorld description of webpart"
+      "description": "HelloAngular"
     }
   }]
 }

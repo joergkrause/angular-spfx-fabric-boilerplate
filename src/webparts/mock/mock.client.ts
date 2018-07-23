@@ -1,4 +1,4 @@
-import { ISPList } from '../helloWorld/app/models/demo.model';
+import { ISPList } from '../helloAngular/app/models/demo.model';
 
 export default class MockHttpClient {
     private static _items: ISPList[] = [{ title: 'Test', name: 'Some Name' },];

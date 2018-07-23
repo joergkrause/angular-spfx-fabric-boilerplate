@@ -1,6 +1,6 @@
-## angular-webpart
+## Angular Demo Webpart
 
-This is where you include your WebPart documentation.
+Pure client code for SharePoint 2016 On Premise with SpFx installed and Office 365 SharePoint Online. Uses current Angular (currently 6.0.3).
 
 ### Building the code
 

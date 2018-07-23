@@ -5,39 +5,36 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
 import { escape } from '@microsoft/sp-lodash-subset';
-// style
-import styles from './HelloWorldWebPart.module.scss';
-import * as strings from 'HelloWorldWebPartStrings';
 
-// Angular specfic part goes here
-import "reflect-metadata";
+require('zone.js');
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
-require('zone.js');
 
-// props
-export interface IHelloWorldWebPartProps {
+import styles from './HelloAngularWebPart.module.scss';
+import * as strings from 'HelloAngularWebPartStrings';
+
+export interface IHelloAngularWebPartProps {
   description: string;
 }
 
-export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+export default class HelloAngularWebPart extends BaseClientSideWebPart<IHelloAngularWebPartProps> {
 
   public render(): void {
-    window['webPartContext'] = this.context;
     this.domElement.innerHTML = `
-      <div class="${ styles.helloWorld }">
+      <div class="${ styles.helloAngular }">
         <div class="${ styles.container }">
           <div class="${ styles.row }">
             <div class="${ styles.column }">
-              <span class="${ styles.title }">Static Title</span>
-              <p class="${ styles.subTitle }">Static Subtitle</p>
+              <span class="${ styles.title }">Welcome to SharePoint!</span>
+              <p class="${ styles.subTitle }">Customize SharePoint experiences using Web Parts.</p>
               <p class="${ styles.description }">${escape(this.properties.description)}</p>
-              <spfx-app>Loading Angular...</spfx-app>
+              <a href="https://aka.ms/spfx" class="${ styles.button }">
+                <span class="${ styles.label }">Learn more</span>
+              </a>
             </div>
           </div>
         </div>
       </div>`;
-      platformBrowserDynamic().bootstrapModule(AppModule);
   }
 
   protected get dataVersion(): Version {
