@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IWebPartContext } from '@microsoft/sp-webpart-base';
 
 @Component({

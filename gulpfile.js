@@ -11,6 +11,7 @@ const path = require('path');
 build.configureWebpack.mergeConfig({
    additionalConfiguration: (generatedConfiguration) => {
       generatedConfiguration.plugins.push(new webpack.ContextReplacementPlugin(/\@angular(\\|\/)core(\\|\/)fesm5/, path.join(__dirname, './client')));
+      generatedConfiguration.plugins = generatedConfiguration.plugins.filter((plugin) => plugin.constructor.name !== 'UglifyJsPlugin');
       return generatedConfiguration;
    }
 });

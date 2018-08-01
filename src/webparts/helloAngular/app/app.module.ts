@@ -22,7 +22,7 @@ export class AppModule {
   public ngDoBootstrap() {
       if(!customElements.get('spfx-app'))
       {
-         // define a custom element to getz a valid entry point before Angular is fully bootstrapped
+         // define a custom element to get a valid entry point before Angular is fully bootstrapped
          const appElement = createCustomElement(AppComponent, {injector : this.injector});
          customElements.define('spfx-app', appElement);
       }

@@ -8,7 +8,7 @@ import { ISPList, ISPLists } from '../models/demo.model';
 @Component({
   selector: 'spfx-list',
   template: `
-    <div class="" *ngIf="!tems">No items found or list '{{ listName }}' does not exists</div>
+    <div class="" *ngIf="!items">No items found or list '{{ listName }}' does not exists</div>
     <table class="TFtable" border=1 width=100% style="border-collapse: collapse;" *ngIf="items">
       <th>Title</th><th>Name</th>
       <tr *ngFor="let item of items">
